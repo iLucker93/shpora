@@ -30,4 +30,10 @@ User               Posts        Comments
 
 = simple_form_for :topic, url: forum_topics_path(@forum.id), html: {method: :post} do |f|
 
+
+
+= link_to 'blabla',  new_forum_topic_path(@forum) to New  /forum/id/topics/new
+
+= link_to  "User Posts", [@forum, :topics]    to Show   /forum/id/topics/index
+
 ===================================================================================================================
