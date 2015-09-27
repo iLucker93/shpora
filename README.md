@@ -29,6 +29,15 @@ User               Posts        Comments
                                 user_id
 
 = simple_form_for :topic, url: forum_topics_path(@forum.id), html: {method: :post} do |f|
+def new   
+		@forum = Forum.find(params[:forum_id])
+		@topic = Topic.new
+	end  
+	def create
+		@forum = Forum.find(params[:forum_id])
+		@topic = @forum.topics.create(topic_params)
+		...
+		end
 
 
 
